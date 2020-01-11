@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="690dp"
+    android:background="@color/colorAccent"
+    tools:context="com.example.yaneekepollock.postfixinfix.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lblue"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="202dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bgradient"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="258dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:entries="@array/Calctype" />
+
+            <TextView
+                android:id="@+id/equation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="right|bottom"
+                android:text="equation"
+                android:textAlignment="gravity"
+
+                android:textColor="@android:color/background_light"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="result"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/postfix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="postfix"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:weightSum="4">
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:text="C"
+                android:textColor="@android:color/darker_gray"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/buttonm"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:text="M"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/buttons"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:text="S"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/div"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:text="S"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp"
+                android:src="@drawable/div1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:weightSum="4">
+
+            <Button
+                android:id="@+id/bracket1"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text="("
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@color/background"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/bracket2"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text=")"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@color/background"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/backspace"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:src="@drawable/clear1"
+                android:text="S"
+
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/mult"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:src="@drawable/mult1"
+                android:text="S"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            tools:weightSum="4">
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text="7"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text="8"
+                android:textColor="@color/background"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text="9"
+                android:textColor="@color/background"
+                android:textSize="20sp"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:id="@+id/sub"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:src="@drawable/sub50"
+                android:text="S"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/c456"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/one"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#F3F4F4"
+            android:orientation="horizontal"
+            tools:weightSum="4">
+
+            <Button
+                android:id="@+id/four"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text="4"
+                android:textColor="@color/background"
+                android:textSize="20sp"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"/>
+
+            <Button
+                android:id="@+id/five"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:foreground="@drawable/ripple_effect"
+            android:clickable="true"
+                android:text="5"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:text="6"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/add"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/lblue"
+                android:src="@drawable/plus50"
+                android:text="S"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="433dp"
+            android:layout_height="136dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/holo_green_dark"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/one"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_above="@+id/zero"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:text="1"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_above="@+id/zero"
+                android:layout_toEndOf="@+id/one"
+                android:layout_toRightOf="@+id/one"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"                android:text="2"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+
+                android:layout_alignTop="@+id/two"
+                android:layout_toEndOf="@+id/two"
+                android:layout_toRightOf="@+id/two"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:text="3"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+
+            <!-- Third row finish -->
+
+            <!-- Fourth row Start -->
+
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:text="0"
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/dot"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/zero"
+                android:layout_toRightOf="@+id/zero"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:text="."
+                android:textColor="@color/background"
+                android:textSize="20sp" />
+
+            <Button
+
+                android:id="@+id/space"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/two"
+                android:layout_toRightOf="@+id/two"
+                android:layout_weight="1"
+                android:text="space"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:textColor="@color/background"
+                android:background="@color/blue1"
+                android:textSize="12sp" />
+
+
+            <ImageButton
+                android:id="@+id/equal"
+                android:layout_width="90dp"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:foreground="@drawable/ripple_effect"
+                android:clickable="true"
+                android:layout_toEndOf="@+id/three"
+                android:layout_toRightOf="@+id/three"
+                android:layout_weight="1"
+                android:background="@drawable/gradient"
+                android:src="@drawable/equal1"
+                android:textColor="#858686"
+                android:textSize="20sp" />
+
+            <!-- Third row finish -->
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
